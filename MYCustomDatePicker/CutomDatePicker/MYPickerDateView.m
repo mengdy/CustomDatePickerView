@@ -157,11 +157,12 @@
         }
     }else {
         NSInteger yearSelected = [pickerView selectedRowInComponent:0] + self.minShowYear;
+        NSInteger monthSelected = [pickerView selectedRowInComponent:1] + 1;
         if (yearSelected==_currentYear+1) {
             //至今选项的时候日信息不返回
             return 0;
-        }else if (yearSelected == _currentYear){
-        
+        }else if (yearSelected == _currentYear && monthSelected == _currentMonth){
+          //选择当前月的天数
             return _currentDay;
         }else{
             NSInteger yearSelected = [pickerView selectedRowInComponent:0] + self.minShowYear;
