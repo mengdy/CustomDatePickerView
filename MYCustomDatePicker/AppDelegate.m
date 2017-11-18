@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MYShowPickerController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    MYShowPickerController *show = [[MYShowPickerController alloc]init];
+    UINavigationController *na = [[UINavigationController alloc]initWithRootViewController:show];
+    self.window.rootViewController = na;
+    
+    
+    
+    
     return YES;
 }
 

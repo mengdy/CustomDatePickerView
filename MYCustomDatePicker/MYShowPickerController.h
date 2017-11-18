@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MYShowPickerController.h
 //  MYCustomDatePicker
 //
 //  Created by mengdy on 17/11/10.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MYShowPickerController : UIViewController
 
 @end
-

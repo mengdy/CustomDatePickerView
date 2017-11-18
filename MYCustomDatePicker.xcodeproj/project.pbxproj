@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		BB0016611FB53830005820F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0016601FB53830005820F0 /* main.m */; };
 		BB0016641FB53830005820F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0016631FB53830005820F0 /* AppDelegate.m */; };
-		BB0016671FB53830005820F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0016661FB53830005820F0 /* ViewController.m */; };
 		BB00166A1FB53830005820F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0016681FB53830005820F0 /* Main.storyboard */; };
 		BB00166C1FB53830005820F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB00166B1FB53830005820F0 /* Assets.xcassets */; };
 		BB00166F1FB53830005820F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB00166D1FB53830005820F0 /* LaunchScreen.storyboard */; };
 		BB00167A1FB53830005820F0 /* MYCustomDatePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0016791FB53830005820F0 /* MYCustomDatePickerTests.m */; };
 		BB0016851FB53830005820F0 /* MYCustomDatePickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0016841FB53830005820F0 /* MYCustomDatePickerUITests.m */; };
+		BB0016971FB5389A005820F0 /* MYShowPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0016961FB5389A005820F0 /* MYShowPickerController.m */; };
+		BB00169B1FB53983005820F0 /* MYBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB00169A1FB53983005820F0 /* MYBasePickerView.m */; };
+		BB00169E1FB539ED005820F0 /* MYPickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB00169D1FB539ED005820F0 /* MYPickerDateView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		BB0016601FB53830005820F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB0016621FB53830005820F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB0016631FB53830005820F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BB0016651FB53830005820F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB0016661FB53830005820F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BB0016691FB53830005820F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB00166B1FB53830005820F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB00166E1FB53830005820F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		BB0016801FB53830005820F0 /* MYCustomDatePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYCustomDatePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0016841FB53830005820F0 /* MYCustomDatePickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYCustomDatePickerUITests.m; sourceTree = "<group>"; };
 		BB0016861FB53830005820F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB0016951FB5389A005820F0 /* MYShowPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYShowPickerController.h; sourceTree = "<group>"; };
+		BB0016961FB5389A005820F0 /* MYShowPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYShowPickerController.m; sourceTree = "<group>"; };
+		BB0016991FB53983005820F0 /* MYBasePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBasePickerView.h; sourceTree = "<group>"; };
+		BB00169A1FB53983005820F0 /* MYBasePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBasePickerView.m; sourceTree = "<group>"; };
+		BB00169C1FB539ED005820F0 /* MYPickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPickerDateView.h; sourceTree = "<group>"; };
+		BB00169D1FB539ED005820F0 /* MYPickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPickerDateView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,11 @@
 		BB00165E1FB53830005820F0 /* MYCustomDatePicker */ = {
 			isa = PBXGroup;
 			children = (
+				BB0016981FB5395D005820F0 /* CutomDatePicker */,
 				BB0016621FB53830005820F0 /* AppDelegate.h */,
 				BB0016631FB53830005820F0 /* AppDelegate.m */,
-				BB0016651FB53830005820F0 /* ViewController.h */,
-				BB0016661FB53830005820F0 /* ViewController.m */,
+				BB0016951FB5389A005820F0 /* MYShowPickerController.h */,
+				BB0016961FB5389A005820F0 /* MYShowPickerController.m */,
 				BB0016681FB53830005820F0 /* Main.storyboard */,
 				BB00166B1FB53830005820F0 /* Assets.xcassets */,
 				BB00166D1FB53830005820F0 /* LaunchScreen.storyboard */,
@@ -138,6 +145,17 @@
 				BB0016861FB53830005820F0 /* Info.plist */,
 			);
 			path = MYCustomDatePickerUITests;
+			sourceTree = "<group>";
+		};
+		BB0016981FB5395D005820F0 /* CutomDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				BB0016991FB53983005820F0 /* MYBasePickerView.h */,
+				BB00169A1FB53983005820F0 /* MYBasePickerView.m */,
+				BB00169C1FB539ED005820F0 /* MYPickerDateView.h */,
+				BB00169D1FB539ED005820F0 /* MYPickerDateView.m */,
+			);
+			path = CutomDatePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0016671FB53830005820F0 /* ViewController.m in Sources */,
 				BB0016641FB53830005820F0 /* AppDelegate.m in Sources */,
+				BB00169E1FB539ED005820F0 /* MYPickerDateView.m in Sources */,
 				BB0016611FB53830005820F0 /* main.m in Sources */,
+				BB0016971FB5389A005820F0 /* MYShowPickerController.m in Sources */,
+				BB00169B1FB53983005820F0 /* MYBasePickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
