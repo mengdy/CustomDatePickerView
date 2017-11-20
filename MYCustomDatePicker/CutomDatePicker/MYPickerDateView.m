@@ -85,16 +85,22 @@
 //设置默认显示的数值
 -(void)setDefaultTSelectYear:(NSInteger)defaultSelectYear defaultSelectMonth:(NSInteger)defaultSelectMonth defaultSelectDay:(NSInteger)defaultSelectDay{
     
-    if (defaultSelectYear!=0) {
+    if (defaultSelectYear!=0 && defaultSelectYear >= _minShowYear) {
         _defaultYear=defaultSelectYear;
+    }else{
+        _defaultYear = _minShowYear;
     }
     
-    if (defaultSelectMonth!=0) {
+    if (defaultSelectMonth!=0 && defaultSelectMonth > 0) {
         _defaultMonth = defaultSelectMonth;
+    }else{
+        _defaultMonth = 0;
     }
     
-    if (defaultSelectDay!=0) {
+    if (defaultSelectDay!=0 && defaultSelectDay > 0) {
         _defaultDay=defaultSelectDay;
+    }else{
+        _defaultDay = 0;
     }
     
     
@@ -145,6 +151,9 @@
         }
     }else if(component == 1) {
         NSInteger yearSelected = [pickerView selectedRowInComponent:0] + self.minShowYear;
+       
+        NSLog(@"-------%ld",yearSelected);
+
         if (yearSelected==_currentYear+1) {
             //至今选项的时候月份信息不返回
             return 0;
